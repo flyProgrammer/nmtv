@@ -1,0 +1,298 @@
+
+.tex {
+  display: inline;
+}
+text{
+  display: inline;
+}
+page{
+  background-color: #f5f5f5;
+}
+
+/*头部*/
+.header{
+  width: 100%;
+  position: relative;
+}
+.header image{
+  width: 100%;
+  height: 350rpx;
+}
+.center{
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: 20rpx;
+}
+
+
+.avator,.avator image{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50px;
+  margin: 3px auto;
+  text-align: center;
+ 
+  /* box-shadow: 10px 10px 5px pink; */
+}
+
+.avator image{
+   border: 4px solid #cbe0f9;
+}
+
+ .name{
+   text-align: center;
+  /* left: 30%; */
+  /* top: 240rpx; */
+  
+} 
+.name1{
+  width: 20%;
+  left: 4%;
+  top: 50rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+
+}
+
+.uname{
+  padding-top: 18px;
+  display: block;
+  font-family: '微软雅黑';
+  font-size: 36rpx;
+  color: #fff;
+  text-align: center;
+}
+
+/* 未绑定时的状态 */
+
+.avaleft,.connect,.bindright{
+  position: absolute;
+  top: 30rpx;
+   float: left;
+}
+
+.avaleft,.avaleft image{
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  left: 50px;
+  overflow: hidden;
+  position: absolute;
+}
+.avaleft{
+  width: 90px;
+  height: 90px
+}
+.avaleft image{
+  border: 5px solid #cbe0f9;
+  left: 0
+}
+
+
+.connect{
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  height: 70rpx;
+  top: 90px;
+}
+
+.connect image{
+  width: 45px;
+  height: 45px;
+}
+
+.bindright{
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  margin: 3px auto;
+  right:50px;
+  border:5px solid #cbe0f9
+}
+
+.nobind{
+  height: 20px;
+  line-height: 20px;
+  margin-top: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+/*解绑  */
+.unbind{
+  position: absolute;
+  width: 10%;
+  height: 50rpx;
+  right: 10rpx;
+  bottom: 20rpx;
+  text-align: center;
+}
+.unbind image{
+  width: 90%;
+  height: 40rpx;
+}
+
+.ok{
+  font-size:24rpx;
+  color:#fff;
+  background:rgba(0,0,0,0.5);
+  text-align:center;
+  width:100%;
+  position:absolute;
+  bottom:0px;
+  left:0px;
+  padding:6rpx 0 10rpx;
+}
+
+/*手机订单  */
+.mpOrder{
+  width: 94%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #e2e2e2;
+  box-shadow: 2px 2px 5px  #e2e2e2; 
+  align-items: center;
+  background-color: #a9cdf5;
+  border-top-left-radius:100rpx;
+  border-top-right-radius:5rpx;
+  border-bottom-right-radius:100rpx;
+  border-bottom-left-radius:5rpx;
+}
+
+.odmark,.odmark image{
+   width:30%;
+   height: 240rpx;
+   margin-left: 5%;
+   margin-right: 5%;
+}
+
+.jianjie{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  font-family:'微软雅黑';
+  font-size: 36rpx;
+  color: #fff;
+  margin: 0 auto;
+}
+
+.recently{
+  height: 50%;
+  line-height: 50%;
+  align-items: center;
+}
+
+.button{
+  width: 50%;
+  border-radius: 10px;
+  padding: 5px 20px;
+  text-align: center;
+  margin-top: 10%;
+  height: 10%;
+  background-color: #8ba1f0;
+}
+/*新增客户样式*/
+
+#icon1 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.bind1 {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #f5f5f5;
+  border-radius: 6px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  margin: 13rpx 4rpx;
+}
+
+.left,.right{
+  border: 2px solid #e2e2e2;
+  border-radius: 5px;
+}
+
+.flex image {
+  width: 260rpx;
+  height: 300rpx;
+}
+
+.left{
+  margin-right: 2%;
+}
+
+
+.left1{
+  margin-right: 3%;
+  
+}
+
+.txt1{
+  width: 90%;
+  margin: 10rpx auto;
+  font-size: 26rpx;
+}
+
+.left1,.right1{
+  /* border: 2px solid #e2e2e2;
+  border-radius: 5px; */
+  width: 43%;
+  background-color: #e2e2e2;
+  padding: 2px 10px;
+  margin-left: 3%;
+}
+
+.in {
+  width: 88%;
+  margin: 10px auto;
+  background-color: #fafafa;
+  border: 1px solid #f5f5f5;
+}
+
+.num {
+  width: 88%;
+}
+
+.num input {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #999;
+}
+
+.alert {
+  margin-top: 40rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.cancel {
+  width: 50%;
+  border-top: 1px solid #f5f5f5;
+  border-right: 1px solid #f5f5f5;
+}
+
+.atonce {
+  width: 49.89%;
+  border-top: 1px solid #f5f5f5;
+  color: #7090dc;
+}

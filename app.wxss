@@ -1,0 +1,13 @@
+/**app.wxss**/
+.container {
+  /*height: 500px;*/
+  background-color: #f5f5f5;
+  margin: 0px auto;
+  font-size: 30rpx;
+  font-family: "微软雅黑";
+} 
+text{
+  display: block;
+}
+
+

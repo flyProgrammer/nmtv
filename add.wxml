@@ -1,0 +1,50 @@
+<view class="container">
+  <view style="width:92%;margin:0 auto;height:6.0rem;"></view>
+
+   <view class="bind">
+     <view style="width:92%;margin:0 auto;">
+       <view class="flex">
+         <view class="flex left">
+           <image src="/utils/images/ad1.png"></image>
+         </view>
+         <view class="flex right">
+           <image src="/utils/images/ad2.png"></image>
+         </view>
+       </view>
+     </view>
+
+   <view class="txt">
+     <text>输入要绑定的智能卡号或宽带账号</text>
+   </view>
+   
+
+  
+   <view class="in">
+     <view class="num">
+       <input  type="text" placeholder="请输入红色位置标明的数字"/>
+     </view>
+     <view class="scan">
+       <view class="scan_left">
+         <image src="/utils/images/scan.png"></image>
+       </view>
+       <view class="scan_right">
+         <text>扫码</text>
+       </view>
+       <view style="clear:both;"></view>
+     </view>
+     <view style="clear:both;"></view>
+   </view>
+   
+   <view class="alert">
+       <view class="cancel">
+         <text>取消</text>
+       </view>
+       <view class="atonce">
+         <text>立即绑定</text>
+       </view>
+   </view>
+               
+   </view>
+   <view style="width:92%;margin:0 auto;height:11.8rem;">
+   </view>
+</view>

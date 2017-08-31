@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/wechat/wechat",
+    "pages/list/list",
+    "pages/my/my",
+    "pages/bindlist/bindlist",
+    "pages/pay2/pay2",
+    "pages/order/order",
+    "pages/detail/detail",
+    "pages/pay/pay" 
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#7090dc",
+    "navigationBarTitleText": "我的微信",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh":"true"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#7090dc",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "utils/images/icon1.png",
+        "iconPath": "utils/images/icon_1.png",
+        "pagePath": "pages/list/list",
+        "text": "基本订购"
+      },
+     
+      {
+        "selectedIconPath": "utils/images/icon_3.png",
+        "iconPath": "utils/images/icon3.png",
+        "pagePath": "pages/wechat/wechat",
+        "text": "家庭缴费"
+      },
+       {
+        "selectedIconPath": "utils/images/icon_2.png",
+        "iconPath": "utils/images/icon2.png",
+        "pagePath": "pages/my/my",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

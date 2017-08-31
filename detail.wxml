@@ -1,0 +1,120 @@
+<view>
+  <loading wx:if="{{showLoading}}">正在获取节目详情</loading>
+</view>
+
+<view class="container">
+
+  <!--头部图片-->
+  <view class="head">
+    <!-- <image src="{{proList.product_image}}"></image> -->
+    <image src="../../utils/images/logal1.png"></image>
+  </view>
+  <view class="basic">
+    <view style="width:96%;margin:0 auto;">
+      <view class="left">
+        <text class="b1">{{proList.category}}</text>
+        <text class="b2">{{proList.location_id}}</text>
+      </view>
+      <view class="right">
+        <!--
+    <view class="share">
+      <image src="/utils/images/share.png"></image>
+      <text style="color:#979797;">分享</text>
+    </view>
+    <view class="collect">
+      <image src="/utils/images/collect1.png" style="margin-left:10px"></image>
+      <text style="color:#fc9976;">已收藏</text>
+    </view>
+    -->
+
+      <view class="vote"  wx:if="{{proList.assistant_price==''}}">
+      <view class="jiage">
+            <text>价格：{{proList.main_price}}</text>
+        </view> 
+        </view>
+
+        <view class="vote" wx:else>
+          <view class="zhu">
+            <text>主机：{{proList.main_price}}</text>
+          </view>
+          <view class="fu">
+            <text>副机：{{proList.assistant_price}}</text>
+          </view>
+        </view>
+
+
+      </view>
+      <view style="clear:both;"></view>
+    </view>
+  </view>
+  <view class="order">
+    <view class="choose">
+      <text>订购</text>
+      <view class="flex-item dg">
+        <image src="/utils/images/plus.png" bindtap="plus"></image>
+      </view>
+
+      <view class="flex-item num">
+        <input type="text" value="{{month}}" style="background:#fff;" name="month" bindChange="monthValue" />
+      </view>
+
+      <view>
+        <view></view>
+        <image src="/utils/images/sub.png" bindtap="sub"></image>
+      </view>
+      <text>个月</text>
+    </view>
+    <view class="confirm">
+        <view class="bind" bindtap="gopay" >
+          确认订购
+        </view>
+      
+    </view>
+  </view>
+  <view class="descrip">
+    <view class="title">
+      <view style="width:96%;margin:0 auto;display:flex;flex-direction:row;">
+      <view class="bd"></view>
+        <view class="tit">
+          <text>套餐描述</text>
+        </view>
+      </view>
+    </view>
+    <view class="xiangqing">
+      <view style="width:96%;margin:0 auto;">
+       <view class="row">
+         <view class="row_left">用户：</view>
+         <view class="row_right">{{proList.user_type}}</view>
+       </view>
+        <view class="row">
+            <view class="row_left"   wx:if="{{proList.assistant_price==''}}"></view>
+            <view class="row_left"   wx:else>终端：</view>
+            <view class="row_right">{{proList.machine_type}}</view>
+        </view>
+        <view class="row">
+            <view class="row_left">业务：</view>
+            <view class="row_right"  wx:if="{{proList.assistant_price==''}}">价格：{{proList.main_price}}</view>
+            <view class="row_right"  wx:else>主机：{{proList.main_price}} 副机：{{proList.assistant_price}}</view>
+        </view>
+        <view class="row">
+            <view class="row_left">节目：</view>
+            <view class="row_right">{{proList.product_short_desc}}</view>
+        </view>
+        
+      </view>
+    </view>
+  </view>
+</view>
+
+  <!--新增客户遮罩层-->
+<view id="dicon1" hidden="{{flag1}}">
+<view class="dtip">
+   <view class="dchoice">提示</view>
+   <view class="djfh">请先到个人中心进行绑定</view>
+   <view class="dselect">
+      <view class="dagain" bindtap="back">取消</view>
+      <view class="dconfirm" bindtap="product">确定</view>
+      <view style="clear:both;"></view>
+   </view>
+</view> 
+</view>

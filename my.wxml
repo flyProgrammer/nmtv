@@ -1,0 +1,236 @@
+<view class="container">
+
+  <!-- <view class="header">
+    <view class="flex-item img">
+      <image class="head" src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <view class="flex-item name">
+      <text class="uname">{{userInfo.nickName}}</text>
+    </view>
+    <view class="flex-item bind">--> 
+      <!--<text>{{location.latitude}}</text>-->
+      <!-- <text>{{city}}</text>
+    </view>
+  </view> --> 
+  <view class="header">
+     <image src="../../utils/images/mine.png" class="avabg"></image>
+     <view animation="{{animationDataLeft}}" class="avaleft" style="left:{{ava_left}}">
+       <image src="{{userInfo.avatarUrl}}" class="ava" ></image>
+       <view class="ok"  style="display:{{bottom_border}}" bindtap="bindlist">{{cust_name}}</view>
+    </view>
+    <view style="top:{{heart}}" class="connect" animation="{{animationDataDown}}">
+       <image src="../../utils/images/heart.png"></image>
+    </view>
+    <view bindtap="show" style="display:{{right_border}};right:{{ava_left}}" animation="{{animationDataRight}}" class="bindright">
+       <view class="nobind" >去绑定</view>
+  </view>
+
+  <view style="display:{{bottom_border}}" class="unbind"  bindtap="unbind">
+    <image src="../../utils/images/unbind.png"></image>
+  </view>
+  </view>
+   
+   <!--手机订单  -->
+    <view class="mpOrder"  style="margin-top:150rpx;">
+       <image src="../../utils/images/order.png" class="odmark"></image>
+       <view class="jianjie">
+           <view class="recently">您最近的购买记录</view>
+           <navigator url="../order/order" class="button">点击查看</navigator> 
+       </view>
+    </view>
+    </view>
+
+  <!--新增客户遮罩层-->
+<view class="container" id="icon1" hidden="{{flag}}">
+  <view style="width:92%;margin:0 auto;height:6.0rem;"></view>
+  <view class="bind1">
+    <view style="width:92%;margin:0 auto;">
+      <view class="flex">
+        <view class="flex left">
+          <image src="/utils/images/ad1.png"></image>
+        </view>
+        <view class="flex right">
+          <image src="/utils/images/ad2.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="flex txt1">
+    <view class="left1">
+          <view class="example">机顶盒扫码样例1</view>
+        </view>
+        <view class="right1">
+          <view class="example">机顶盒扫码样例2</view>
+        </view>
+    </view>
+
+    <view class="in">
+      <view class="num">
+        <input type="number" placeholder="输入要绑定的智能卡号或宽带账号" placeholder-style="color:red" maxlength="16" bindblur="accountInput"/>
+      </view>
+      <view style="clear:both;"></view>
+    </view>
+
+    <view class="alert">
+      <view class="cancel" bindtap="no">
+        <text>取消</text>
+      </view>
+      <view class="atonce" bindtap="receive">
+        <text>立即绑定</text>
+      </view>
+    </view>
+  </view>
+  <view style="width:92%;margin:0 auto;height:11.8rem;">
+  </view>
+</view>
+  <!--绑定后的状态  -->
+  <!-- <view class="center">
+    <view class="avator">
+        <image src="{{userInfo.avatarUrl}}" class="ava"></image>
+    </view>
+    <view class="name">
+      <text class="uname">{{userInfo.nickName}}</text>
+  </view>
+  </view> -->
+
+    
+  
+  
+  <!-- <view class="avator">
+      <image src="{{userInfo.avatarUrl}}" class="ava"></image>
+  </view>
+
+  <view class="name">
+      <text class="uname">{{userInfo.nickName}}</text>
+  </view> -->
+
+  <!-- <view class="customer" bindtap="enlarge">
+    <view class="slogan">
+    <image src="../../utils/images/msg.png"></image>
+    </view> 
+      <view class="cus">
+
+      <view class="userinfo">
+      <view class="classname1">姓名：</view><view class="content1">{{msg[2]}}</view>
+      </view>
+
+      <view class="userinfo">
+      <view class="classname1">地址：</view><view class="content1 set">{{msg[1]}}</view>
+      </view>
+
+      <view class="userinfo">
+      <view class="classname">智能卡号：</view><view class="content">{{msg[0]}}</view>
+      </view>
+   
+  </view>
+  </view> -->
+
+  <!--新增遮罩层  -->
+  <!-- <view id="icon1" hidden="{{flag}}">
+  <view class="customer" bindtap="cancel">
+    <view class="slogan">
+    <image src="../../utils/images/msg.png"></image>
+    </view> 
+      <view class="cus">
+
+      <view class="userinfo">
+      <view class="classname1">姓名：</view><view class="content1">{{msg[2]}}</view>
+      </view>
+
+      <view class="userinfo">
+      <view class="classname1">地址：</view><view class="content1 set1">{{msg[1]}}</view>
+      </view>
+
+      <view class="userinfo">
+      <view class="classname">智能卡号：</view><view class="content">{{msg[0]}}</view>
+      </view>
+   </view>
+  </view>
+  </view> -->
+
+  <!-- <navigator url="" class="nav" url="/pages/bindlist/bindlist"  style=" margin-top: 160rpx;">
+      <view class="flex-left sp">
+        <image class="imgstyle" src="/utils/images/bind.png"></image>
+      </view>
+      <view class="flex-center">
+        <text class="tex">绑定管理</text>
+      </view>
+      <view class="flex-right">
+        <image class="imgstyle" src="/utils/images/icone4.png"></image>
+      </view>
+    </navigator>
+
+    <navigator url="" class="nav" url="/pages/order/order">
+      <view class="flex-left">
+        <image class="imgstyle" src="/utils/images/order.png"></image>
+      </view>
+      <view class="flex-center">
+        <text class="tex">手机订单</text>
+      </view>
+      <view class="flex-right">
+        <image class="imgstyle" src="/utils/images/icone4.png"></image>
+      </view>
+    </navigator> -->
+  <!-- <view class="body">
+
+    <navigator url="/pages/bindlist/bindlist" class="nav">
+      <view class="flex-left">
+        <image class="imgstyle" src="/utils/images/bind.png"></image>
+      </view>
+      <view class="flex-center">
+        <text class="tex">绑定管理</text>
+      </view>
+      <view class="flex-right">
+        <image class="imgstyle" src="/utils/images/icone4.png"></image>
+      </view>
+    </navigator>
+
+    
+     <view  class="nav sp" bindtap="showSelected">
+      <view class="flex-left">
+        <image class="imgstyle gr" src="/utils/images/customer.png"></image>
+      </view>
+
+      <view class="flex-center">
+        <text class="tex">客户信息</text>
+      </view> -->
+
+      <!--客户信息展示-->
+
+      <!-- <view class="flex-right">
+        <view class="icon1">
+          <image src="{{showView?'/utils/images/up.png':'/utils/images/icone4.png'}}"></image>
+       </view>
+     </view>
+
+  </view>
+
+   <view class="cus" hidden="{{selectPerson}}">
+
+    <view class="userinfo">
+    <view class="classname">姓名：</view><view class="content">{{msg[2]}}</view>
+    </view>
+
+    <view class="userinfo">
+    <view class="classname">地址：</view><view class="content">{{msg[1]}}</view>
+    </view>
+
+    <view class="userinfo">
+    <view class="classname">智能卡号：</view><view class="content">{{msg[0]}}</view>
+    </view>
+ </view> 
+
+    <navigator url="" class="nav" url="/pages/order/order">
+      <view class="flex-left">
+        <image class="imgstyle" src="/utils/images/order.png"></image>
+      </view>
+      <view class="flex-center">
+        <text class="tex">手机订单</text>
+      </view>
+      <view class="flex-right">
+        <image class="imgstyle" src="/utils/images/icone4.png"></image>
+      </view>
+    </navigator>
+  </view>-->
+
+

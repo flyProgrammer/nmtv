@@ -1,0 +1,103 @@
+<view class="account">
+   <view class="acnum">有线数字电视基本包</view>
+   <view class="add">查看详情</view>
+   <view class="icon1">
+     <image src="/utils/images/icone4.png"></image>
+   </view>
+</view>
+
+<view class="order first">
+    <view class="od">
+     <text>订单号</text>
+    </view> 
+    <view class="odnum">
+     <text>NO:4558966654545454345</text>
+    </view>
+</view>
+
+<view class="order">
+    <view class="od">
+     <text>下单时间</text>
+    </view> 
+    <view class="odnum">
+     <text>2017年年06月月01日 12:26</text>
+    </view>
+</view>
+
+
+<view class="detail">
+    <view class="item">
+        <view class="left">缴费账号</view>
+        <view class="right">156886</view>
+    </view>
+    <view></view>
+    <view></view>
+</view>
+
+<view class="detail">
+    <view class="item">
+        <view class="left">客户姓名</view>
+        <view class="right">**斯</view>
+    </view>
+    <view></view>
+    <view></view>
+</view>
+
+<view class="order">
+   <view class="od">
+     <text>用户地址</text>
+    </view> 
+    <view class="odnum">
+     <text>NO:4558966654545454345</text>
+    </view>
+     </view>
+<!--缴费明细-->
+<text class="tit">缴费明细</text>
+
+<view class="detail">
+    <view class="item">
+        <view class="left">缴费号（主）8154565625246698</view>
+        <view class="right">￥30</view>
+    </view>
+    <view></view>
+    <view></view>
+</view>
+
+<view class="detail">
+    <view class="item">
+        <view class="left">缴费号（副1）8154565625246698</view>
+        <view class="right">￥10</view>
+    </view>
+    <view></view>
+    <view></view>
+</view>
+
+<view class="detail">
+    <view class="item">
+        <view class="left">缴费号（副2）8154565625246698</view>
+        <view class="right">￥10</view>
+    </view>
+    <view></view>
+    <view></view>
+</view>
+
+<view class="detail">
+    <view class="item">
+        <view class="row1">缴费时长：12个月</view>
+        <view class="row2">
+            <view class="txt1">合计：</view>
+            <view class="txt2">￥50.00</view>
+        </view>
+    </view>
+    <view></view>
+    <view></view>
+</view>
+
+
+
+
+<view class="go">
+   <image src="/utils/images/logal.png"></image>
+   <text class="wepay">微信支付</text> 
+</view>
+

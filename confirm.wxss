@@ -1,0 +1,140 @@
+page{
+    background-color: #f5f5f5;
+    font-family:"微软雅黑";
+}
+.account{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    height: 80rpx;
+}
+.acnum{
+    margin-left: 4%;
+    width: 73%;
+    font-size: 26rpx;
+    color: #333;
+    line-height: 80rpx;
+}
+.add{
+    width: 15%;
+    font-size: 24rpx;
+    color: #999;
+    line-height: 80rpx;
+    display: flex;
+    flex-direction: row;
+}
+.icon1{
+    width: 4%;
+    margin-right: 4%;
+}
+.icon1 image{
+    width: 40rpx;
+    height: 40rpx;
+    margin-top: 20rpx;
+}
+
+.order{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+}
+.first{
+    margin-top:30rpx;
+}
+.od{
+    margin-left: 4%;
+    width: 50%;
+    height: 80rpx;
+}
+.odnum{
+    width: 42%;
+    margin-right: 4%;
+}
+.od text,.odnum text{
+     font-size: 24rpx;
+     color: #999;
+     line-height:80rpx;
+}
+/*缴费明细*/
+.tit{
+    font-size: 24rpx;
+    color: #999;
+    padding-left: 4%;
+    padding-top: 10rpx;
+    padding-bottom: 10rpx;
+}
+.detail{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+.item{
+    width: 100%;
+    height: 80rpx;
+    display: flex;
+    flex-direction: row;
+    line-height: 80rpx;
+}
+.left{
+    width: 80%;
+    margin-left: 4%;
+    font-size: 24rpx;
+    color: #999;
+    line-height: 80rpx;
+}
+.right{
+    width: 12%;
+    margin-right: 4%;
+    font-size: 24rpx;
+    color: #999;
+}
+.row1{
+    width: 60%;
+    margin-left: 4%;
+    font-size: 30rpx;
+    color: #999;
+    line-height: 80rpx;
+}
+.row2{
+    width: 32%;
+    display: flex;
+    flex-direction: row;
+}
+.txt1{
+    width: 40%;
+    font-size: 30rpx;
+    color: #333;
+    line-height: 80rpx;
+}
+.txt2{
+    width: 60%;
+    font-size: 30rpx;
+    color: #fa3137;
+    line-height: 80rpx;
+}
+
+.go{
+   width: 88%;
+   height: 80rpx;
+   line-height: 80rpx;
+   margin: 50rpx auto;
+   background-color: #7090dc; 
+   border-radius: 5px;
+   display: flex;
+   flex-direction: row;
+}
+.go image{
+    width: 50rpx;
+    height: 50rpx;
+    margin-top: 15rpx;
+    margin-left: 35%;
+    margin-right: 2%;
+}
+.wepay{
+    font-size: 32rpx;
+    color: #fff;
+    text-align: center;
+}

@@ -1,0 +1,51 @@
+<!--pages/pay/pay.wxml-->
+<view class="container">
+  <view class="txt">
+    <text class="tips">温馨提示：此缴费功能支持内蒙古广电网络有线/无线数字电视基本费用缴纳，并同时为客户同一地址下所有主副机缴纳相同时长的基本费用</text>
+  </view>
+  <!--con结束标签 -->
+  <view class="sel-pay">
+    <view class="account">
+      <view class="item1">输入账号</view>
+      <view class="item2">{{aNo}}</view>
+    </view>
+
+    <view class="business">
+      <view class="item1">缴费业务</view>
+      <view class="item21">{{bs}}</view>
+    </view>
+  </view>
+  <!-- sel-pay结束-->
+  <!-- <view class="now">
+    <view class="atd">{{addr}}</view>
+    <view class="pic">
+      <image src="/utils/images/more.png"></image>
+    </view>
+  </view> -->
+
+  <view class="customer">
+    <view class="type">
+      <view class="item1">客户名称</view>
+      <view class="item21">{{name}}</view>
+    </view>
+    <view class="account">
+      <view class="item1">缴费地址</view>
+      <view class="item2">
+        {{addr}}
+      </view>
+    </view>
+  </view>
+
+  <view class="times">
+    <view class="type">
+      <view class="item1">缴费时长</view>
+      <view class="item21">{{month}}</view>
+    </view>
+  </view>
+
+  <view class="go" bindtap="submit">
+    去结算
+  </view>
+
+
+</view>

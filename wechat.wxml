@@ -1,0 +1,187 @@
+<view>
+  <loading wx:if="{{showLoading}}">正在获取绑定用户信息</loading>
+</view>
+
+<view class="wepay">
+  <view class="logal">
+    <image src="/utils/images/wechat.png"></image>
+  </view>
+  <view class="txt">微信缴费</view>
+</view>
+
+
+ <view wx:if="{{checkView==1}}" class="account" bindtap="showCountno">
+  <view class="acnum">智能卡号</view>
+  <view class="add">
+  {{aNo}}
+  </view>
+  <view class="icon1">
+    <image src="{{showView3?'/utils/images/bootm.png':'/utils/images/top.png'}}"></image>
+  </view>
+  </view>
+
+   <view wx:else class="account" >
+  <view class="acnum">智能卡号</view>
+  <view class="add1">
+    <input bindblur="getAc_no" type="number" placeholder="请输入您的智能卡号"  maxlength="16" class="inputNo" 
+    style="text-align:right;font-family:'微软雅黑'"/>
+  </view>
+  <view class="con" bindtap="numSelect">
+    <view class="con_button">确定</view>                 
+  </view>
+  </view>
+
+   
+   
+<view class="{{showView3?'select_hidden':'select_show'}}">
+  <view class="select_one {{id==val?'selected':''}}" wx:for="{{userInfo}}" wx:for-index="ke" wx:for-item="item" bindtap="numSelect" data-me="{{item}}" id="{{item}}">{{item}}
+  </view>
+</view> 
+
+<view class="account" bindtap="showSelected" style="border-top:1px solid #f5f5f5;display:{{add_style}}">
+  <view class="acnum">当前地址</view>
+  <view class="add">{{addr}}</view>
+   <!-- <view class="icon1">
+    <image src="{{showView?'/utils/images/bootm.png':'/utils/images/top.png'}}"></image>
+  </view>  -->
+</view>
+
+ <!-- <view class="{{showView?'select_hidden':'select_show'}}">
+  <view class="select_one {{id==key?'selected':''}}" wx:for="{{userinfo}}"  wx:for-index="key"
+   wx:for-item="value" bindtap="mySelect" data-me="{{value.address_name}}" id="{{key}}">{{value}}</view>
+ </view>  -->
+
+<view class="account" style="border:1px solid #f5f5f5;display:{{customer_style}}">
+  <view class="acnum">客户名称</view>
+  <view class="add">{{name}}</view>
+</view>
+
+<view class="account type" style="display:{{account_type}}">
+  <view class="acnum">缴费类型</view>
+  <view bindtap="sel_wire" class="pay_type1"  style="display:{{pay_type1}}">
+    <view class="mk">
+    <image src="{{selected1==2?'/utils/images/yes.png':'/utils/images/circle1.png'}}" ></image>
+    </view>
+       <view class="text1">有线数字电视</view>
+      </view>
+  <view bindtap="sel_kd" class="pay_type2"   style="display:{{pay_type2}}">
+  <view class="mk1">
+    <image src="{{selected2==2?'/utils/images/yes.png':'/utils/images/circle1.png'}}"  ></image>
+    </view>
+    <view class="text1">宽带</view>
+  </view>
+
+  <view class="pay_type"  style="display:{{pay_type}}">
+    <view class="mk2">
+    <image src="../../utils/images/yes.png" bindtap="sel_wireless"></image>
+
+    </view>
+       <view class="text1">无线数字电视</view>
+       </view>
+
+</view>
+
+
+<view class="account" style="border:1px solid #f5f5f5;display:{{pay_business}};" bindtap="showBusiness">
+  <view class="acnum">缴费业务</view>
+  <view class="add" bindtap="wire" style="display:{{wire}};">{{aa}}</view>
+  <view class="add"  bindtap="kuandai" style="display:{{kuandai}};">{{bb}}</view>
+  <view class="add" bindtap="wireless" style="display:{{wireless}};">{{cc}}</view>
+  <!--<view class="icon1">
+    <image src="{{showView2?'/utils/images/bootm.png':'/utils/images/top.png'}}"></image>
+  </view>
+</view>
+ <view class="{{showView2?'select_hidden':'select_show'}}" >
+    <view class="select_one {{id1==key?'selected':''}}" bindtap="business" wx:for="{{arr}}" wx:for-index="key" wx:for-item="value" data-me="{{value}}" id="{{key}}">{{value}}</view>-->
+</view>
+
+
+
+<view class="account type" bindtap="timeSeleced">
+  <view class="acnum">缴费时长</view>
+  <view class="add"  style="margin-right:4%;">
+    <view class="month">
+      <text class="">{{month}} 个月</text>
+    </view>
+  </view>
+  <!--<view class="icon1">
+    <image src="{{showView2?'/utils/images/bootm.png':'/utils/images/top.png'}}"></image>
+  </view>-->
+</view>
+
+<view class="go" bindtap="gopay">
+  下一步
+</view>
+
+<!--遮罩层提示  -->
+<view id="icon1" hidden="{{flag}}">
+<view class="tip">
+   <view class="choice">您选择的缴费号是：</view>
+   <view class="jfh">缴费号：{{tcNo}}</view>
+   <view class="dz">{{addr}}</view>
+   <view class="select">
+      <view class="again" bindtap="back">重新选择</view>
+      <view class="confirm" bindtap="product">确定</view>
+      <view style="clear:both;"></view>
+   </view>
+</view> 
+</view>
+
+<view id="icon1" hidden="{{flag1}}">
+    <view class="jf_type">
+        <view bindtap="setmeal" class="type1">
+           <view class="type_slogan">
+                 <image src="{{selected3==2?'/utils/images/tsel.png':'/utils/images/circle1.png'}}"  ></image>
+           </view>
+       <view class="type_text">数字电视基本包套餐</view>
+   </view>
+   <view  bindtap="unset" class="type2">
+     <view class="type_slogan">
+       <image src="{{selected4==2?'/utils/images/tsel.png':'/utils/images/circle1.png'}}" ></image>
+     </view>
+       <view class="type_text">数字电视基本包</view>
+     </view>
+</view> 
+</view>
+
+<view id="icon1" hidden="{{flag2}}">
+    <view class="jf_type">
+   <view bindtap="setmonth" class="type2">
+     <view class="type_slogan">
+       <image src="{{selected3==2?'/utils/images/tsel.png':'/utils/images/circle1.png'}}"  ></image>
+     </view>
+       <view class="type_text">广电宽带20M包月续费套餐</view>
+     </view>
+      <view bindtap="setyear" class="type1">
+           <view class="type_slogan">
+                 <image src="{{selected4==2?'/utils/images/tsel.png':'/utils/images/circle1.png'}}" ></image>
+       </view>
+       <view class="type_text">广电宽带20M包年续费套餐</view>
+   </view>
+</view> 
+</view>
+
+<view id="icon1" hidden="{{flag3}}">
+    <view class="jf_type1">
+   <view bindtap="setwireless" class="type3">
+     <view class="type_slogan">
+       <image src="../../utils/images/yes.png"></image>
+     </view>
+       <view class="type_text">无线数字电视基本包套餐</view>
+     </view>
+</view> 
+</view>
+
+<!--新增客户遮罩层-->
+<view id="icon1" hidden="{{flag}}">
+<view class="tip">
+   <view class="choice">您输入的缴费号：</view>
+   <view class="jfh">缴费号：{{tcNo}}</view>
+   <view class="dz">{{addr}}</view>
+   <view class="select">
+      <view class="again" bindtap="no">取消</view>
+      <view class="confirm" bindtap="product">确定</view>
+      <view style="clear:both;"></view>
+   </view>
+</view> 
+</view>

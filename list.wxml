@@ -1,0 +1,47 @@
+<!--logs.wxml-->
+<!--加载中-->
+<view>
+  <loading wx:if="{{showLoading}}">节目列表获取中</loading>
+</view>
+
+<view class="container log-list {{showView?'':''}}">
+  <block wx:for="{{proList}}" wx:for-item="item" wx:for-index="idx">
+    <navigator  class="nav" url="/pages/detail/detail?id={{item.id}}">
+      <view class="li1" >
+        <image src="../../utils/images/listbg.png"  class="background"></image> 
+        <image src="../../utils/images/logal1.png"  class="mark"></image>
+        <view class="title">{{item.title}}</view>
+        <view wx:if="{{item.machine_type==''}}"  class="price">价格：{{item.main_price}}</view>
+        <view wx:else  class="price">主机：{{item.main_price}}   副机：{{item.assistant_price}}</view>
+        <view class="desc">{{item.product_short_desc}}</view>
+     </view>
+    </navigator>
+  </block>
+</view>
+
+
+
+
+
+
+<!-- 
+<view class="container log-list {{showView?'':''}}">
+
+  <block wx:for="{{proList}}" wx:for-item="item" wx:for-index="idx">
+    <navigator url="" class="nav" url="/pages/detail/detail?id={{item.id}}">
+      <view class="li1" bindtap="abc()">
+        <view class="flex-left">
+          <image class="imgstyle" src="{{item.product_image}}"></image>
+        </view>
+        <view class="flex-center">
+          <text class="title">{{item.title}}</text>
+          <text class="price">主机：{{item.main_price}} 副机：{{item.assistant_price}}</text>
+          <text class="desc">{{item.product_short_desc}}</text>
+        </view>
+        <view class="flex-right">
+          <image class="imgstyle" src="{{imgsrcright}}"></image>
+        </view>
+      </view>
+    </navigator>
+  </block>
+</view> -->

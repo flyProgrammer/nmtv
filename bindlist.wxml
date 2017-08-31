@@ -1,0 +1,78 @@
+<view class="container">
+  <view class="bind">
+    <block wx:for="{{adarr}}" wx:for-item="item">
+      <view style="width:92%;margin:24rpx auto;">
+        <view class="b_left" data-id="{{item.id}}" bindtap="choseTxtColor" style="{{item.is_select==1?'border:1px solid #fa3137;':''}}">
+          <view class="mark">
+            <image src="{{item.is_select==1?'/utils/images/sel.png':'/utils/images/circle.png'}}"></image>
+            <!-- <image src="{{item.id==idx?'/utils/images/sel.png':'/utils/images/circle.png'}}"></image>  -->
+          </view>
+          <view class="addr">
+            <text class="uname">{{item.contact_person}}</text>
+            <!-- <text class="ress">{{item.address_name}}</text> -->
+          </view>
+          <view style="clear:both;"></view>
+        </view>
+        <!-- <view class="b_right" data-id="{{item.id}}" bindtap="deleteMsg" style="{{item.id == ide?'border-bottom:4px double #fa3137;':''}}">
+          <text>删除</text>
+        </view> -->
+        <view style="clear:both;"></view>
+      </view>
+    </block>
+
+  </view>
+ 
+  <view style="{{new_add}}" class="add" bindtap="show">
+    <view class="icon">
+      <image src="{{add_image}}"></image>
+    </view>
+    <view class="txt">
+      <text class="new">新增客户</text>
+      <text class="neimeng">(仅限内蒙古广电网络用户)</text>
+    </view>
+  </view>
+</view> 
+
+<!--新增客户遮罩层-->
+<view class="container" id="icon1" hidden="{{flag}}">
+  <view style="width:92%;margin:0 auto;height:6.0rem;"></view>
+  <view class="bind1">
+    <view style="width:92%;margin:0 auto;">
+      <view class="flex">
+        <view class="flex left">
+          <image src="/utils/images/ad1.png"></image>
+        </view>
+        <view class="flex right">
+          <image src="/utils/images/ad2.png"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class="flex txt1">
+    <view class="left1">
+          <view class="example">机顶盒扫码样例1</view>
+        </view>
+        <view class="right1">
+          <view class="example">机顶盒扫码样例2</view>
+        </view>
+    </view>
+
+    <view class="in">
+      <view class="num">
+        <input type="number" placeholder="输入要绑定的智能卡号或宽带账号" placeholder-style="color:red" maxlength="16" bindblur="accountInput"/>
+      </view>
+      <view style="clear:both;"></view>
+    </view>
+
+    <view class="alert">
+      <view class="cancel" bindtap="cancel">
+        <text>取消</text>
+      </view>
+      <view class="atonce" bindtap="receive">
+        <text>立即绑定</text>
+      </view>
+    </view>
+  </view>
+  <view style="width:92%;margin:0 auto;height:11.8rem;">
+  </view>
+</view>

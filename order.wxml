@@ -1,0 +1,251 @@
+<view class="container">
+
+  <block wx:for="{{orderList}}" wx:for-item="item" wx:for-index="idx">
+    <view class="top">
+      <view class="ex">
+        <view class="flex">
+          <view class="flex-item icon">
+            <image src="/utils/images/sm_order.png"></image>
+          </view>
+          <view class="flex-item odnum">
+            <text>订单号：{{item.order_sn}}</text>
+          </view>
+          <view style="display:none" class="flex-item states">
+            <text>{{item.pay_status==0?'未支付':'已完成'}}</text>
+          </view>
+        </view>
+      </view>
+
+      <view class="flex1">
+        <view class="tit">
+          <text>{{item.title}}</text>
+        </view>
+        <view class="zhuangt">
+          <text>{{item.pay_status==1?'已开通':'未开通'}}</text>
+        </view>
+        <view class="price">
+          <text>￥{{item.order_money}}</text>
+        </view>
+      </view>
+
+      <view class="pay">
+        <view class="pay_left">
+          <text>支付状态：</text>
+        </view>
+        <view class="pay_right">
+          <text>{{item.pay_status==0?'未支付':'已支付'}}</text>
+        </view>
+      </view>
+      <view class="num">
+        <view class="jiaofei">
+          <text>缴费号：{{item.sc_no}}</text>
+        </view>
+        <view class="time">
+          <text>{{item.create_date}}</text>
+        </view>
+      </view>
+
+    </view>
+  </block>
+</view>
+
+
+
+<!--
+
+    <view class="top">
+
+    <view class="ex">
+      <view class="flex">
+        <view class="flex-item icon">
+          <image src="/utils/images/order.png"></image>
+        </view>
+        <view class="flex-item odnum">
+          <text>订单号：nmtv_149276327315131</text>
+        </view>
+        <view class="flex-item states1">
+          <text>补开通</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="flex1">
+      <view class="tit">
+        <text>有限数字电视基本包套餐</text>
+      </view>
+      <view class="zhuangt">
+        <text>已开通</text>
+      </view>
+      <view class="price">
+        <text>￥120.00</text>
+      </view>
+    </view>
+
+    <view class="pay">
+      <view class="pay_left">
+        <text>支付状态：</text>
+      </view>
+      <view class="pay_right">
+        <text>已支付</text>
+      </view>
+    </view>
+    <view class="num">
+      <view class="jiaofei">
+         <text>缴费号：047101483277</text>
+      </view>
+      <view class="time">
+         <text>2017-04-21 17:32</text>
+      </view>
+    </view>
+
+  </view>
+
+
+
+
+    <view class="top">
+
+    <view class="ex">
+      <view class="flex">
+        <view class="flex-item icon">
+          <image src="/utils/images/order.png"></image>
+        </view>
+        <view class="flex-item odnum">
+          <text>订单号：nmtv_149276327315131</text>
+        </view>
+        <view class="flex-item states">
+          <text>已完成</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="flex1">
+      <view class="tit">
+        <text>有限数字电视基本包套餐</text>
+      </view>
+      <view class="zhuangt">
+        <text>已开通</text>
+      </view>
+      <view class="price">
+        <text>￥120.00</text>
+      </view>
+    </view>
+
+    <view class="pay">
+      <view class="pay_left">
+        <text>支付状态：</text>
+      </view>
+      <view class="pay_right">
+        <text>已支付</text>
+      </view>
+    </view>
+    <view class="num">
+      <view class="jiaofei">
+         <text>缴费号：047101483277</text>
+      </view>
+      <view class="time">
+         <text>2017-04-21 17:32</text>
+      </view>
+    </view>
+
+  </view>
+
+
+
+    <view class="top">
+
+    <view class="ex">
+      <view class="flex">
+        <view class="flex-item icon">
+          <image src="/utils/images/order.png"></image>
+        </view>
+        <view class="flex-item odnum">
+          <text>订单号：nmtv_149276327315131</text>
+        </view>
+        <view class="flex-item states">
+          <text>已完成</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="flex1">
+      <view class="tit">
+        <text>有限数字电视基本包套餐</text>
+      </view>
+      <view class="zhuangt">
+        <text>已开通</text>
+      </view>
+      <view class="price">
+        <text>￥120.00</text>
+      </view>
+    </view>
+
+    <view class="pay">
+      <view class="pay_left">
+        <text>支付状态：</text>
+      </view>
+      <view class="pay_right">
+        <text>已支付</text>
+      </view>
+    </view>
+    <view class="num">
+      <view class="jiaofei">
+         <text>缴费号：047101483277</text>
+      </view>
+      <view class="time">
+         <text>2017-04-21 17:32</text>
+      </view>
+    </view>
+
+  </view>
+
+
+
+    <view class="top">
+
+    <view class="ex">
+      <view class="flex">
+        <view class="flex-item icon">
+          <image src="/utils/images/order.png"></image>
+        </view>
+        <view class="flex-item odnum">
+          <text>订单号：nmtv_149276327315131</text>
+        </view>
+        <view class="flex-item states">
+          <text>已完成</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="flex1">
+      <view class="tit">
+        <text>有限数字电视基本包套餐</text>
+      </view>
+      <view class="zhuangt">
+        <text>已开通</text>
+      </view>
+      <view class="price">
+        <text>￥120.00</text>
+      </view>
+    </view>
+
+    <view class="pay">
+      <view class="pay_left">
+        <text>支付状态：</text>
+      </view>
+      <view class="pay_right">
+        <text>已支付</text>
+      </view>
+    </view>
+    <view class="num">
+      <view class="jiaofei">
+         <text>缴费号：047101483277</text>
+      </view>
+      <view class="time">
+         <text>2017-04-21 17:32</text>
+      </view>
+    </view>
+
+  </view>
+
+</view>-->

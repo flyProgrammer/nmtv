@@ -1,0 +1,283 @@
+/* 温馨提示*/
+
+page {
+  background-color: #f5f5f5;
+}
+
+.txt {
+  width: 92%;
+  margin: 20rpx auto;
+}
+
+.tips {
+  font-size: 22rpx;
+  color: #999;
+  line-height: 32rpx;
+}
+
+.sel-pay {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+.account, .type, .business {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #f5f5f5;
+  width: 100%;
+  height: 80rpx;
+}
+
+
+.account {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  height: 80rpx;
+}
+
+.acnum {
+  margin-left: 4%;
+  width: 20%;
+  font-size: 26rpx;
+  color: #333;
+  line-height: 80rpx;
+}
+
+.add {
+  width: 68%;
+  font-size: 26rpx;
+  color: #999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 80rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.row1 {
+  width: 25%;
+}
+
+.row1 input {
+  margin-top: 10rpx;
+  width: 50%;
+  height: 30rpx;
+  font-size: 26rpx;
+  color: #666;
+  border: 1px solid #b2b2b2;
+  padding-left: 38%;
+}
+
+.row2 {
+  width: 30%;
+  font-size: 26rpx;
+  color: #666;
+  line-height: 80rpx;
+}
+
+.icon1 {
+  width: 4%;
+  margin-right: 4%;
+  justify-content:flex-end;
+}
+
+.icon1 image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 20rpx;
+}
+
+.item1 {
+  margin-left: 4%;
+  width: 45%;
+  font-size: 26rpx;
+  color: #999;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.item21 {
+  margin-right: 4%;
+  width: 47%;
+  font-size: 26rpx;
+  color: #999;
+  height: 80rpx;
+  line-height: 80rpx;
+  display:flex;
+  flex-direction:row;
+  justify-content:flex-end;
+}
+
+.item22{
+  margin-right: 4%;
+  /* width: 47%; */
+  font-size: 26rpx;
+  color: #999;
+  min-height: 80rpx;
+  line-height: 80rpx;
+  text-align: right;
+}
+
+.item11 {
+  margin-left: 4%;
+  width: 55%;
+  font-size: 26rpx;
+  color: #999;
+  height: 80rpx;
+  line-height: 80rpx;
+  
+}
+
+.item4 {
+  margin-right: 4%;
+  width: 57%;
+  font-size: 26rpx;
+  color: #999;
+  min-height: 80rpx;
+  line-height: 80rpx;
+}
+
+.now {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+.pay2 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+.atd {
+  margin-left: 4%;
+  width: 92%;
+  font-size: 26rpx;
+  text-align: center;
+  color: #999;
+  height: 80rpx;
+  line-height: 80rpx;
+  overflow: hidden;
+  /* text-overflow: ellipsis; */
+  white-space: nowrap;
+}
+
+.now image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 45%;
+}
+
+.customer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+.times {
+  margin-top: 20rpx;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+}
+
+.item5 {
+  display: flex;
+  flex-direction: row;
+  margin-right: 4%;
+  width: 57%;
+  font-size: 26rpx;
+  color: #999;
+  min-height: 80rpx;
+  line-height: 80rpx;
+}
+
+.row1, .row3 {
+  width: 20%;
+  margin-left: 5%;
+}
+
+.row1 image, .row3 image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.row2 {
+  width: 30%;
+}
+
+.row4 {
+  width: 20%;
+}
+
+input {
+  border: 1px solid #b2b2b2;
+  font-size: 26rpx;
+  padding: 0;
+  color: #999;
+  text-align: center;
+}
+
+.go {
+  width: 92%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 50rpx auto;
+  background-color: #7090dc;
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.person_box {
+  position: relative;
+}
+
+.select_hidden {
+  display: none;
+  /*position: absolute; */
+}
+
+.select_show {
+  display: block;
+}
+
+.select_one {
+  text-align: center;
+  background-color: #fafafa;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 0 0;
+  padding-left: 20%;
+  border-bottom: 2rpx solid rgb(255, 255, 255);
+  font-size: 26rpx;
+  color: #999;
+  overflow: hidden;
+}
+
+.right {
+  width: 80%;
+}
+
+.selected {
+  color: #7090dc;
+}
+
+.month {
+  text-align: center;
+}
